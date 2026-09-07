@@ -3,7 +3,10 @@
 
 #ifdef ARDUINO_ARCH_ESP32
 
-#include "esp_intr.h"
+// https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32/migration-guides/release-5.x/system.html
+// https://github.com/sandeepmistry/arduino-CAN/issues/154
+#include "esp_intr_alloc.h"
+#include "rom/gpio.h"
 #include "soc/dport_reg.h"
 #include "driver/gpio.h"
 
